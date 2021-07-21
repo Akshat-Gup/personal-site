@@ -1,3 +1,16 @@
+let heading = document.querySelector('.headingclass');
+let main = document.querySelector('main');
+setTimeout(() => {
+	heading.classList.add('fadeOut');
+	
+},600);
+setTimeout(()=> {
+	main.classList.remove('d-none');
+	main.classList.add('fadeIn');
+	heading.classList.add('d-none');
+}, 700)
+
+
 let projects = ['chess', 'guitar', 'eightball'];
 let lookupTable = {
 	'chess': 'https://akshat-gup.github.io/Chess-Board/',
