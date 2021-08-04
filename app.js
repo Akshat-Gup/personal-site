@@ -14,7 +14,7 @@ setTimeout(()=> {
 let projects = ['chess', 'guitar', 'eightball'];
 let lookupTable = {
 	'chess': 'https://akshat-gup.github.io/Chess-Board/',
-	'guitar': 'https://akshat-gup.github.io/8-Ball/', 
+	'guitar': 'https://practinstrument.herokuapp.com/', 
 	'eightball': 'https://akshat-gup.github.io/8-Ball/'
 }
 let carousel = document.querySelectorAll('.carousel-item');
