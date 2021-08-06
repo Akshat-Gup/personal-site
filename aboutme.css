@@ -39,6 +39,7 @@ main {
 	justify-content: center;
 	flex-grow: 1;
 	width: 100%;
+	text-decoration: underline;
 }
 a {
 	color: white;
@@ -154,4 +155,8 @@ input {
 }
 .submit-form {
 	width: 80%;
+}
+.sites {
+	padding-top: 10px;
+	color: white;
 }
