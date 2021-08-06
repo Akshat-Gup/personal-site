@@ -12,5 +12,5 @@ chess.addEventListener('click', ()=> {
 })
 eightball.addEventListener('click', ()=> {
 	code.classList.remove('height');
-	code.innerHTML = "<a href='https://akshat-gup.github.io/8-Ball/'><img src='8-ball.png'/></a>";
+	code.innerHTML = "<a href='https://akshat-gup.github.io/8-Ball/'><img src='8-Ball.png'/></a>";
 })
