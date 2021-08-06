@@ -30,12 +30,15 @@ main {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 }
-ul {
+.sites ul {
 	list-style-type: '>>';
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	flex-grow: 1;
+	width: 100%;
 }
 a {
 	color: white;
@@ -50,6 +53,10 @@ li {
 }
 li::marker {
 	padding-right: 10px;
+}
+ul a:hover {
+	font-weight: bold;
+	cursor: pointer;
 }
 pre {
 	color: white;
@@ -134,3 +141,17 @@ footer {
 	from, to { border-color: transparent }
 	50% { border-color: orange; }
   }
+
+input {
+	margin-bottom: 15px;
+	background-color: black;
+	color: white;
+	border-radius: 7px;
+	border: none;
+	padding: 10px;
+	width: 100%;
+	text-align: center;
+}
+.submit-form {
+	width: 80%;
+}
