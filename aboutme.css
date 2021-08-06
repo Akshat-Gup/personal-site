@@ -1,0 +1,91 @@
+body {
+	background: black;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	height: 100vh;
+	font-family: sans-serif;
+	justify-content: center;
+}
+main {
+	display: flex;
+	align-items: center;
+}
+.sites {
+	background-color: #2d2d2dff;
+	border-radius: 50px;
+	height: 80vh;
+}
+.code {
+	background-color: #2d2d2dff;
+	border-radius: 50px;
+}
+.code {
+	width: 60%;
+	margin: 20px;
+}
+.height {
+	height: 80vh;
+}
+.sites {
+	width: 30%;
+	margin: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+ul {
+	list-style-type: ">>";
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+a {
+	color: white;
+	text-decoration: none;
+}
+li {
+	margin-bottom: 10px;
+	padding: 10px;
+	border-radius: 10px;
+	width: 60%;
+	margin-left: 10px;
+}
+li::marker {
+	padding-right: 10px;
+}
+pre {
+	color: white;
+	max-width: 100%;
+	white-space: pre-wrap;
+	margin-left: 5vw;
+}
+.purple {
+	color: #c678dd;
+}
+.yellow {
+	color: #e5c07b;
+}
+.red {
+	color: #e06c75;
+}
+.blue {
+	color: #61afef;
+}
+.green {
+	color: #98c379;
+}
+.code {
+	display: flex;
+	align-items: center;
+}
+.code img {
+	width: 100%;
+	border-radius: 25px;
+}
+a:active {
+	color: white;
+}
+a:hover {
+	color: lightgrey;
+}
