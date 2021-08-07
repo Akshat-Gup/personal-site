@@ -11,11 +11,12 @@ setTimeout(()=> {
 }, 700)
 
 
-let projects = ['chess', 'guitar', 'eightball'];
+let projects = ['chess', 'guitar', 'eightball', 'personalsite'];
 let lookupTable = {
 	'chess': 'https://akshat-gup.github.io/Chess-Board/',
 	'guitar': 'https://practinstrument.herokuapp.com/', 
-	'eightball': 'https://akshat-gup.github.io/8-Ball/'
+	'eightball': 'https://akshat-gup.github.io/8-Ball/',
+	'personalsite': 'https://akshat-gup.github.io/personal-site/duplicate.html'
 }
 let carousel = document.querySelectorAll('.carousel-item');
 carousel.forEach(curr => {
