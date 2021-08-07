@@ -137,7 +137,7 @@ footer {
   /* The typing effect */
   @keyframes typing {
 	from { width: 0 }
-	to { width: 75% }
+	to { width: 70% }
   }
   
   /* The typewriter cursor effect */

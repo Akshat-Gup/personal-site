@@ -1,7 +1,7 @@
 let code = document.querySelector('.code');
 let input = document.querySelector('input');
 console.log(code, input);
-input.addEventListener('keyup', ()=> {
+input.addEventListener('keyup', (event)=> {
 	if (input.value.includes('music')) {
 		code.classList.remove('height');
 		code.innerHTML = "<a href='https://practinstrument.herokuapp.com/'><img src='guitar-app.png'/></a>";
@@ -13,5 +13,8 @@ input.addEventListener('keyup', ()=> {
 	if (input.value.includes('eight') || input.value.includes('8')) {
 		code.classList.remove('height');
 		code.innerHTML = "<a href='https://akshat-gup.github.io/8-Ball/'><img src='8-Ball.png'/></a>";
+	}
+	if (event.key === "Enter") {
+		location.href = document.querySelector('a').href;
 	}
 })
