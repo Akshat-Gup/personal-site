@@ -2,6 +2,7 @@ let code = document.querySelector('.code');
 let input = document.querySelector('input');
 console.log(code, input);
 const initialHtml = `
+<h1>// Akshat's site</h1>
 <div class="pre-wrapper">
 				<pre>
 <span class="grey"> 1</span> 	<span class="purple">class</span> <span class="yellow">WebDev</span> <span class="purple">extends</span> <span class="yellow">Human</span> {
