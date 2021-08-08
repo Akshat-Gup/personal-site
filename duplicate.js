@@ -1,7 +1,7 @@
 let code = document.querySelector('.code');
 let input = document.querySelector('input');
 console.log(code, input);
-const initialHtml = `
+let initialHtml = `
 <h1>// Akshat's site</h1>
 <div class="pre-wrapper">
 				<pre>
@@ -23,6 +23,22 @@ const initialHtml = `
 				</pre>
 </div>
 `;
+if(window.innerWidth <= 600) {
+	initialHtml = `
+	<h1 style="margin-left: 30px;">// Akshat's site</h1>
+	<div class="pre-wrapper">
+		<pre style="font-size: 1.5em; white-space: pre-wrap;">
+<span class="yellow">String[]</span> skills = <span class="green">{"Django", "HTML / CSS / JS"}</span>;
+<span class="yellow">String[]</span> sites = <span class="green">{"8-Ball", "ChessBoard", "Music App"}</span>;
+<div class="typewriter"><span class="yellow">WebDev</span> <span class="red">akshat</span> = <span class="purple">new</span> <span class="blue">WebDev</span>(skills, sites);</div>
+	</pre>
+</div>
+	`;
+	code.innerHTML = initialHtml;
+	code.maxWidth = `${window.innerWidth}px !important`;
+	console.log(code.maxWidth)
+}
+
 input.addEventListener('keyup', (event)=> {
 	if (input.value.includes('music')) {
 		code.classList.remove('height');
