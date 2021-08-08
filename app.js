@@ -13,7 +13,7 @@ setTimeout(()=> {
 
 let projects = ['chess', 'guitar', 'eightball', 'personalsite'];
 let lookupTable = {
-	'chess': 'https://akshat-gup.github.io/Chess-Board/',
+	'chess': 'https://akshat-gup.github.io/new-chess-Board/',
 	'guitar': 'https://practinstrument.herokuapp.com/', 
 	'eightball': 'https://akshat-gup.github.io/8-Ball/',
 	'personalsite': 'https://akshat-gup.github.io/personal-site/duplicate.html'

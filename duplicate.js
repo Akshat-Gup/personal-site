@@ -30,7 +30,7 @@ input.addEventListener('keyup', (event)=> {
 	}
 	if (input.value.includes('chess')) {
 		code.classList.remove('height');
-		code.innerHTML = "<a href='https://akshat-gup.github.io/Chess-Board/'><img src='chessboard.png'/></a>";
+		code.innerHTML = "<a href='https://akshat-gup.github.io/new-chess-Board/'><img src='chessboard.png'/></a>";
 	}
 	if (input.value.includes('eight') || input.value.includes('8')) {
 		code.classList.remove('height');
