@@ -7,7 +7,11 @@
 	<title>About Me</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<link rel="stylesheet" href="aboutme.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
 		.code {
 			width: 100%;
 			flex: 1;
@@ -34,7 +38,8 @@
 			justify-self: flex-end;
 			padding: 0px;
 			margin: 0px;
-			height: 25vh;
+			height: 30vh;
+			flex-grow: 1;
 			background-color: rgb(36, 36, 36);
 			border-top: 1px solid #4c4c4c;
 		}
@@ -73,48 +78,144 @@
 			margin-top: 20px;
 			color: white;
 		}
+		@media screen and (max-width: 800px) {
+			@keyframes typing {
+				from { width: 0 }
+				to { width: 100% }
+			}
+			.code-wrapper {
+				height: 80vh;
+				max-height: 80vh !important;
+			}
+		}
 		@media screen and (max-width: 600px){
 			pre {
 				width: 100vw;
 				white-space: pre-wrap !important;
 				word-break: keep-all;
+				font-size: 1em !important;
 			}	
+			h1 {
+				margin-left: 0px !important;
+			}
 			@keyframes typing {
 				from { width: 0 }
 				to { width: 100% }
 			}
-		}
-		pre {
-			margin-top: 30px;
+			.filepath {
+				display: none;
+			}
 		}
 		
+		pre {
+			margin-top: -20px;
+			margin-left: 0px;
+		}
+		.code-wrapper {
+			display: flex;
+			flex-direction: row;
+			width: 100vw;
+			max-height: 75vh;
+		}
+		.filepath {
+			background-color: rgb(36, 36, 36);
+			color: white;
+			padding-top: 65px;
+			font-family: "Atkinson Hyperlegible";
+		}
+		h3 {
+			margin-left: 30px;
+			padding-top: 5px;
+			font-size: 1.5em;
+			font-weight:bold;
+			font-family: "Atkinson Hyperlegible";
+		}
+		/* Style the button that is used to open and close the collapsible content */
+		.collapsible {
+			background-color: #2d2d2dff;
+			color: white;
+			cursor: pointer;
+			padding: 18px;
+			padding-left: 30px;
+			width: 100%;
+			border: none;
+			text-align: left;
+			outline: none;
+			font-size: 15px;
+			font-weight: 800;
+		}
+
+		/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+		.active, .collapsible:hover {
+			background-color: #2d2d2dff;
+			color: white;
+		}
+
+		/* Style the collapsible content. Note: hidden by default */
+		.content {
+		padding: 0 18px;
+		display: block;
+		overflow: hidden;
+		background-color: rgb(29, 29, 29);
+		}
+		ul {
+			list-style: none;
+			padding-left: 0px;
+		}
+		li {
+			display: flex;
+			align-items: center;
+		}
+		li img {
+			width: 15px;
+			height: 15px;
+			margin-right: 5px;
+		}
+		.code-wrapper {
+			flex-grow: 1;
+		}
 	</style>
 </head>
 <body>
 	<div class="headingclass mt-5"><h1 class="text-light text-center">About Me</h1></div>
 	<main class="d-none">
-		<div class='code height'>
-			<h1>// Akshat's site</h1>
-			<div class="pre-wrapper">
-				<pre>
-<span class="grey"> 1</span> 	<span class="purple">class</span> <span class="yellow">WebDev</span> <span class="purple">extends</span> <span class="yellow">Human</span> {
-<span class="grey"> 2</span> 		<span class="yellow">String[]</span> <span class="red">skills</span>;
-<span class="grey"> 3</span> 		<span class="yellow">String[]</span> <span class="red">sites</span>;
-<span class="grey"> 4</span> 
-<span class="grey"> 5</span> 		<span class="purple">public</span> <span class="blue">WebDev</span>(<span class="yellow">String[]</span> <span class="purple">skills</span>, <span class="yellow">String[]</span> <span class="purple">sites</span>){
-<span class="grey"> 6</span> 			<span class="yellow">this.skills</span> = skills;
-<span class="grey"> 7</span> 			<span class="yellow">this.sites</span> = sites;
-<span class="grey"> 8</span> 		}
-<span class="grey"> 9</span> 
-<span class="grey">10</span> 		<span class="purple">public static void</span> <span class="blue">main</span>(<span class="yellow">String[]</span> args) {
-<span class="grey">11</span> 			<span class="yellow">String[]</span> skills = <span class="green">{"Django", "HTML / CSS / JS"}</span>;
-<span class="grey">12</span> 			<span class="yellow">String[]</span> sites = <span class="green">{"8-Ball", "ChessBoard", "Music App"}</span>;
-<span class="grey">13</span> 			<div class="typewriter"><span class="yellow">WebDev</span> <span class="red">akshat</span> = <span class="purple">new</span> <span class="blue">WebDev</span>(skills, sites);</div>
-<span class="grey">14</span> 		}
-<span class="grey">15</span> 	}
-				</pre>
+		<div class="code-wrapper">
+			<div class="filepath">
+				<h3>FILES</h3>
+				<button type="button" class="collapsible active">OPEN EDITORS</button>
+				<div class="content">
+					<ul>
+						<li class="html"><img src="html.png" alt=""> index.html</li>
+						<li class="html"><img src="html.png" alt=""> nav.html</li>
+						<li class="js"><img src="js.png" alt=""> app.js</li>
+						<li class="css"><img src="css.png" alt=""> styles.css</li>
+					</ul>
+				</div>
+			</div>
+			<div class='code height'>
+				<h1>// Akshat's site</h1>
+				<div class="pre-wrapper">
+					<pre>
+	<span class="grey"> 1</span> 	<span class="purple">class</span> <span class="yellow">WebDev</span> <span class="purple">extends</span> <span class="yellow">Human</span> {
+	<span class="grey"> 2</span> 		<span class="yellow">String[]</span> <span class="red">skills</span>;
+	<span class="grey"> 3</span> 		<span class="yellow">String[]</span> <span class="red">sites</span>;
+	<span class="grey"> 4</span> 
+	<span class="grey"> 5</span> 		<span class="purple">public</span> <span class="blue">WebDev</span>(<span class="yellow">String[]</span> <span class="purple">skills</span>, <span class="yellow">String[]</span> <span class="purple">sites</span>){
+	<span class="grey"> 6</span> 			<span class="yellow">this.skills</span> = skills;
+	<span class="grey"> 7</span> 			<span class="yellow">this.sites</span> = sites;
+	<span class="grey"> 8</span> 		}
+	<span class="grey"> 9</span> 
+	<span class="grey">10</span> 		<span class="purple">public static void</span> <span class="blue">main</span>(<span class="yellow">String[]</span> args) {
+	<span class="grey">11</span> 			<span class="yellow">String[]</span> skills = <span class="green">{"Django", "HTML / CSS / JS"}</span>;
+	<span class="grey">12</span> 			<span class="yellow">String[]</span> sites = <span class="green">{"8-Ball", "ChessBoard", "Music App"}</span>;
+	<span class="grey">13</span> 			<div class="typewriter"><span class="yellow">WebDev</span> <span class="red">akshat</span> = <span class="purple">new</span> <span class="blue">WebDev</span>(skills, sites);</div>
+	<span class="grey">14</span> 		}
+	<span class="grey">15</span> 	}
+					</pre>
+				</div>
 			</div>
 		</div>
+		
 		<div class="submit-form">
 			<p>TERMINAL</p>
 			<div class="userwrite">
