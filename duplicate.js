@@ -74,23 +74,46 @@ for (let i = 0; i < coll.length; i++) {
     }
   });
 }
-let music = document.querySelector('.music');
-let chess = document.querySelector('.chess');
-let eightball = document.querySelector('.eightball');
-music.addEventListener('click', ()=> {
+let openeditorswrapper = document.querySelector('.open-editors-wrapper');
+let alleditors = document.querySelector('.alleditors');
+let addToOpenEditors = vartype => {
+	if (openeditorswrapper.childElementCount == 0) {
+		openeditorswrapper.innerHTML = '<ul class="alleditors"></ul>';
+		openeditorswrapper.firstChild.innerHTML += vartype.outerHTML;
+		if (String(alleditors.innerHTML).includes(vartype.outerHTML)) {
+			alleditors.removeChild(vartype);
+		}
+	} else {
+		if (!String(openeditorswrapper.innerHTML).includes(vartype.outerHTML)) {
+			openeditorswrapper.firstChild.innerHTML += vartype.outerHTML;
+		}
+		if (String(alleditors.innerHTML).includes(vartype.outerHTML)) {
+			alleditors.removeChild(vartype);
+		}
+	}
+}
+
+
+let musicFunc = () => {
+	let music = document.querySelector('.music');
 	code.classList.remove('height');
 	code.innerHTML = "<a href='https://practinstrument.herokuapp.com/'><img src='guitar-app.png'/></a>";
-})
-chess.addEventListener('click', ()=> {
+	addToOpenEditors(music);
+}
+let chessFunc = () => {
+	var chess = document.querySelector('.chess');
 	code.classList.remove('height');
 	code.innerHTML = "<a href='https://akshat-gup.github.io/Chess-Board/'><img src='chessboard.png'/></a>";
-})
-eightball.addEventListener('click', ()=> {
-	code.classList.remove('height');
-	code.innerHTML = "<a href='https://akshat-gup.github.io/8-Ball/'><img src='8-Ball.png'/></a>";
-})
-let jscript = document.querySelector('.js');
-jscript.addEventListener('click', ()=> {
+	addToOpenEditors(chess);
+}
+let eightBallFunc = () => {
+		var eightball = document.querySelectorAll('.eightball');
+		code.classList.remove('height');
+		code.innerHTML = "<a href='https://akshat-gup.github.io/8-Ball/'><img src='8-Ball.png'/></a>";
+		addToOpenEditors(eightball);
+}
+let jscriptFunc = () => {
+	let jscript = document.querySelector('.js');
 	code.classList.add('height');
 	code.innerHTML = `
 	<h1>// Akshat's site</h1>
@@ -120,9 +143,10 @@ jscript.addEventListener('click', ()=> {
 					</pre>
 	</div>
 	`;
-})
-let css = document.querySelector('.css');
-css.addEventListener('click', () => {
+	addToOpenEditors(jscript);
+}
+let cssFunc = () => {
+	let css = document.querySelector('.css');
 	code.classList.add('height');
 	code.innerHTML = `
 	<h1>// Akshat's site</h1>
@@ -144,35 +168,39 @@ css.addEventListener('click', () => {
 					</pre>
 	</div>
 	`;
-})
-let indexhtml = document.querySelector('.indexhtml');
-indexhtml.addEventListener('click', ()=> {
+	addToOpenEditors(css);
+}
+
+let indexhtmlFunc = () => {
+	let indexhtml = document.querySelector('.indexhtml');
 	code.classList.add('height');
 	code.innerHTML = initialHtml;
-})
-let navhtml = document.querySelector('.navhtml');
-navhtml.addEventListener('click', ()=> {
+	addToOpenEditors(indexhtml);
+}
+let navhtmlFunc = () => {
+	let navhtml = document.querySelector('.navhtml');
 	code.classList.add('height');
 	code.innerHTML = `
 	<h1>// Akshat's site</h1>
 	<div class="pre-wrapper">
 					<pre>
-		nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100"
-			a class="navbar-brand font-weight-bold" href="#">Akshat Gupta/a
-			button class="navbar-toggler" type="button" data-toggle="collapse" aria-label="Toggle navigation"
-			span class="navbar-toggler-icon"/span
-			/button
-			div class="collapse navbar-collapse" id="navbarSupportedContent"
-				ul class="navbar-nav mr-auto"
-				i class="nav-item dropdown bg-dark"
-					a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-					Quick Access
-					/a
-					div class="dropdown-menu bg-dark text-light" aria-labelledby="navbarDropdown"
-			/div
-		/nav
+	nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100"
+		a class="navbar-brand font-weight-bold" href="#">Akshat Gupta/a
+		button class="navbar-toggler" type="button" data-toggle="collapse" aria-label="Toggle navigation"
+		span class="navbar-toggler-icon"/span
+		/button
+		div class="collapse navbar-collapse" id="navbarSupportedContent"
+			ul class="navbar-nav mr-auto"
+			i class="nav-item dropdown bg-dark"
+				a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+				Quick Access
+				/a
+				div class="dropdown-menu bg-dark text-light" aria-labelledby="navbarDropdown"
+		/div
+	/nav
 					</pre>
 	</div>
 	`;
-});
+	addToOpenEditors(navhtml);
+}
 
