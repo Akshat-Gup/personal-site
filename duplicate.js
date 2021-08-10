@@ -77,7 +77,6 @@ for (let i = 0; i < coll.length; i++) {
 let openeditorswrapper = document.querySelector('.open-editors-wrapper');
 let alleditors = document.querySelector('.alleditors');
 let addToOpenEditors = vartype => {
-	console.log("Hi + " + vartype)
 	if (openeditorswrapper.childElementCount == 0) {
 		openeditorswrapper.innerHTML = '<ul class="alleditors"></ul>';
 		openeditorswrapper.firstChild.innerHTML += vartype.outerHTML;
