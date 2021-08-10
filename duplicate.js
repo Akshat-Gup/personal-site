@@ -77,6 +77,7 @@ for (let i = 0; i < coll.length; i++) {
 let openeditorswrapper = document.querySelector('.open-editors-wrapper');
 let alleditors = document.querySelector('.alleditors');
 let addToOpenEditors = vartype => {
+	console.log("Hi + " + vartype)
 	if (openeditorswrapper.childElementCount == 0) {
 		openeditorswrapper.innerHTML = '<ul class="alleditors"></ul>';
 		openeditorswrapper.firstChild.innerHTML += vartype.outerHTML;
@@ -107,7 +108,7 @@ let chessFunc = () => {
 	addToOpenEditors(chess);
 }
 let eightBallFunc = () => {
-		var eightball = document.querySelectorAll('.eightball');
+		var eightball = document.querySelector('.eightball');
 		code.classList.remove('height');
 		code.innerHTML = "<a href='https://akshat-gup.github.io/8-Ball/'><img src='8-Ball.png'/></a>";
 		addToOpenEditors(eightball);
