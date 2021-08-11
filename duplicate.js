@@ -103,7 +103,7 @@ let musicFunc = () => {
 let chessFunc = () => {
 	var chess = document.querySelector('.chess');
 	code.classList.remove('height');
-	code.innerHTML = "<a href='https://akshat-gup.github.io/Chess-Board/'><img src='chessboard.png'/></a>";
+	code.innerHTML = "<a href='https://akshat-gup.github.io/new-chess-board/'><img src='chessboard.png'/></a>";
 	addToOpenEditors(chess);
 }
 let eightBallFunc = () => {
